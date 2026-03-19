@@ -1,0 +1,173 @@
+/* ============================================================
+   InmobiliariaApp — Estilos principales
+   ============================================================ */
+
+:root {
+    --primary:    #1a3c5e;
+    --secondary:  #c9a84c;
+    --accent:     #e8f4fd;
+    --dark:       #0d1b2a;
+    --light-gray: #f8f9fa;
+    --text-muted: #6c757d;
+    --font-display: 'Playfair Display', serif;
+    --font-body:    'Inter', sans-serif;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,.12);
+    --shadow-lg: 0 8px 40px rgba(0,0,0,.18);
+    --radius:    12px;
+}
+
+* { box-sizing: border-box; }
+body { font-family: var(--font-body); color: #2d3748; }
+
+/* ---- Navbar ---- */
+#mainNavbar {
+    background: linear-gradient(135deg, var(--primary) 0%, #2a5f8f 100%);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-md);
+    position: sticky; top: 0; z-index: 1030;
+}
+.brand-text { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: -.5px; }
+.navbar-nav .nav-link { font-weight: 500; letter-spacing: .3px; transition: color .2s; }
+.navbar-nav .nav-link:hover { color: var(--secondary) !important; }
+
+/* ---- Hero Section ---- */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 60%, #2a5f8f 100%);
+    min-height: 90vh;
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+}
+.hero-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><circle cx="600" cy="100" r="300" fill="%23ffffff08"/><circle cx="100" cy="500" r="200" fill="%23ffffff05"/></svg>');
+    background-size: cover;
+}
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700; line-height: 1.15;
+    color: #fff;
+}
+.hero-title span { color: var(--secondary); }
+.hero-subtitle { color: rgba(255,255,255,.75); font-size: 1.1rem; font-weight: 300; }
+
+/* ---- Search Box ---- */
+.search-box {
+    background: rgba(255,255,255,.97);
+    border-radius: var(--radius);
+    padding: 1.8rem 2rem;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+}
+.search-box .form-label { font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .8px; color: var(--primary); }
+.search-box .form-control,
+.search-box .form-select {
+    border: 1.5px solid #e2e8f0; border-radius: 8px;
+    font-size: .9rem; padding: .65rem 1rem;
+    transition: border-color .2s, box-shadow .2s;
+}
+.search-box .form-control:focus,
+.search-box .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26,60,94,.1);
+}
+.btn-search {
+    background: var(--primary); color: #fff;
+    border-radius: 8px; font-weight: 600;
+    padding: .7rem 2rem; border: none;
+    transition: background .2s, transform .15s;
+}
+.btn-search:hover { background: #0d2840; transform: translateY(-1px); color: #fff; }
+
+/* ---- Stats bar ---- */
+.stats-bar { background: var(--secondary); }
+.stat-item { text-align: center; padding: 1.2rem; }
+.stat-number { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--dark); }
+.stat-label  { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .8px; color: rgba(13,27,42,.7); }
+
+/* ---- Section titles ---- */
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2rem; font-weight: 700;
+    color: var(--primary);
+}
+.section-divider {
+    width: 50px; height: 3px;
+    background: var(--secondary);
+    border-radius: 2px; margin: .5rem auto 1.5rem;
+}
+
+/* ---- Property Card ---- */
+.prop-card {
+    border: none; border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform .25s, box-shadow .25s;
+    overflow: hidden;
+}
+.prop-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.prop-card .card-img-top { height: 200px; object-fit: cover; }
+.prop-card-img-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+    display: flex; align-items: center; justify-content: center;
+    color: #94a3b8; font-size: 3rem;
+}
+.badge-operacion {
+    position: absolute; top: 12px; left: 12px;
+    padding: .3rem .8rem; border-radius: 20px;
+    font-size: .75rem; font-weight: 700; text-transform: uppercase;
+}
+.badge-venta   { background: var(--primary); color: #fff; }
+.badge-arriendo { background: var(--secondary); color: var(--dark); }
+.prop-precio {
+    font-family: var(--font-display);
+    font-size: 1.3rem; font-weight: 700; color: var(--primary);
+}
+.prop-features { font-size: .82rem; color: var(--text-muted); }
+.prop-features i { color: var(--secondary); }
+
+/* ---- Features Section ---- */
+.feature-icon {
+    width: 64px; height: 64px;
+    background: var(--accent); border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; color: var(--primary);
+    margin: 0 auto 1rem;
+    transition: background .2s, transform .2s;
+}
+.feature-card:hover .feature-icon {
+    background: var(--primary); color: #fff; transform: scale(1.08);
+}
+
+/* ---- CTA Section ---- */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), #2a5f8f);
+    color: #fff;
+}
+
+/* ---- Footer ---- */
+.footer-main { background: #0d1b2a; color: #94a3b8; }
+.footer-brand { font-family: var(--font-display); font-size: 1.4rem; color: #fff; }
+.footer-link { color: #94a3b8; text-decoration: none; transition: color .2s; display: block; margin-bottom: .4rem; }
+.footer-link:hover { color: var(--secondary); }
+
+/* ---- Auth Forms ---- */
+.auth-card {
+    border: none; border-radius: 20px;
+    box-shadow: var(--shadow-lg); padding: 2.5rem;
+}
+.auth-title { font-family: var(--font-display); font-size: 1.8rem; color: var(--primary); }
+.form-floating .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,60,94,.1); }
+.btn-primary-custom {
+    background: var(--primary); color: #fff; border: none;
+    border-radius: 10px; font-weight: 600; padding: .8rem;
+    transition: background .2s, transform .15s; width: 100%;
+}
+.btn-primary-custom:hover { background: #0d2840; transform: translateY(-1px); color: #fff; }
+
+/* ---- Utilities ---- */
+.bg-primary-custom { background: var(--primary) !important; }
+.text-primary-custom { color: var(--primary) !important; }
+.text-secondary-custom { color: var(--secondary) !important; }

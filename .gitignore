@@ -1,0 +1,8 @@
+target/ 
+*.class 
+*.war 
+.vscode/ 
+TestConexion.java 
+TestLogin.java 
+TestConexion.class 
+TestLogin.class 

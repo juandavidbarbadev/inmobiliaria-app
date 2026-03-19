@@ -1,0 +1,36 @@
+<footer class="footer-main mt-5">
+    <div class="container">
+        <div class="row g-4 py-5">
+            <div class="col-md-4">
+                <h5 class="footer-brand"><i class="bi bi-building-fill me-2"></i>InmobiliariaApp</h5>
+                <p class="text-muted small mt-2">Tu aliado de confianza para encontrar la propiedad perfecta en Colombia.</p>
+            </div>
+            <div class="col-md-4">
+                <h6 class="fw-semibold mb-3">Navegación</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="${pageContext.request.contextPath}/index.jsp" class="footer-link">Inicio</a></li>
+                    <li><a href="${pageContext.request.contextPath}/jsp/propiedades.jsp" class="footer-link">Propiedades</a></li>
+                    <li><a href="${pageContext.request.contextPath}/jsp/login.jsp" class="footer-link">Ingresar</a></li>
+                    <li><a href="${pageContext.request.contextPath}/jsp/register.jsp" class="footer-link">Registrarse</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 class="fw-semibold mb-3" id="contacto">Contacto</h6>
+                <ul class="list-unstyled small text-muted">
+                    <li><i class="bi bi-geo-alt me-2"></i>Bucaramanga, Colombia</li>
+                    <li><i class="bi bi-telephone me-2"></i>+57 300 000 0000</li>
+                    <li><i class="bi bi-envelope me-2"></i>info@inmobiliariaapp.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <p class="text-center text-muted small py-3 mb-0">
+            &copy; 2026 InmobiliariaApp — Proyecto académico UTS
+        </p>
+    </div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
+</body>
+</html>
